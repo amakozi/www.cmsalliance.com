@@ -1,0 +1,21 @@
+#main
+{
+	display:inline;
+	width:550px;
+	float:left;
+	overflow:auto;
+	margin-right:-1px;
+}
+#right
+{
+	overflow:auto;
+}
+
+#right p
+{
+	margin-left:10px;
+}
+#right img
+{
+	margin-left:10px;
+}

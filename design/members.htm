@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="CMS Alliance">
+		<meta name="keywords" content="amakozi, technology, consulting, consultant, tridion, sdl tridion, content management">
+		<link href="./design/netmain.css" rel="stylesheet" media="screen" type="text/css">
+		<link href="./design/net2col.css" rel="stylesheet" media="screen" type="text/css">
+		<link href="./design/menu.css" rel="stylesheet" media="screen" type="text/css">
+		<link href="./design/nivo-slider.css" rel="stylesheet" media="screen" type="text/css">
+    	<script type="text/javascript" src="./design/jquery-1.4.3.min.js"></script>
+    	<script type="text/javascript" src="./design/jquery.nivo.slider.pack.js"></script>
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="./design/unitpngfix.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<style>
+				#loginform
+				{
+					margin-left:-203px !important;
+				}
+			</style>
+		<![endif]-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#signin a:first-child").click(function () {
+					var logindiv = $("#loginform");
+					if($(logindiv).is(':visible'))
+					{
+						$(logindiv).hide(500);
+						$("#signin").removeClass("current");
+					}else{
+						$(logindiv).show(500);
+						$("#signin").addClass("current");
+					}
+				});
+			});
+		</script>
+
+		<title>
+			CMS Alliance
+		</title>
+	</head>
+	<body>
+	    <form name="aspnetForm" method="post" action="./default_loggedin.htm" id="aspnetForm">
+		<div id="wrap">
+			<div id="header">
+				<a href="./default_loggedin.htm">
+					<div id="logo" class="unitPng">CMS Alliance</div>
+				</a>
+				<div id="menu">
+					<ul class="glossymenu">
+						<li class=""><a href="default_loggedin.htm"><b>Home</b></a></li>
+						<li class="current"><a href="members.htm"><b>Members</b></a></li>
+						<li class=""><a href="projects.htm"><b>Projects</b></a></li>
+						<li class=""><a href="about.htm"><b>About</b></a></li>
+						<li id="signin"><a href="#"><b>My Member Account</b></a>
+							<div id="loginform" style="text-align:left;">
+							<br/>
+							<br/>
+							<a href="./profile.htm">Edit my Profile</a>
+							<br/>
+							<br/>
+							<a href="./default.htm">Logout</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="content">
+
+				<div id="main">
+					<h1>Alliance Members</h1>
+					<br/>
+				</div>
+
+				<div id="right">
+					<br/>
+					<h4>Security on Members view</h4>
+					<p>Member details (like emails, etc) is only revealed to other members, not to anonymous users.</p>
+					<br/>
+					<p>When anonymous, only the member name or logo is displayed.  None of the member accolades are displayed</p>
+					<br/>
+					<br/>
+					<h4>Lorum Ipsum</h4>
+					<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+				</div>
+
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footercontent">
+				<div id="poweredby">
+					<a href="http://www.amakozi.com" title="Amakozi Technologies">
+						This is a proud initiative by <img src="./design/Logo 117x26 Grayscale Transparent.png" border="0" alt="Amakozi Technologies"/>
+					</a>
+				</div>
+			</div>
+		</div>
+    	</form>
+	</body>
+</html>

@@ -1,0 +1,202 @@
+body
+{
+	background:url(headerbg.png) repeat-x;
+	margin:0px;
+	font-family:Sans-Serif;
+	font-size:13px;
+	color:#333333;
+}
+html,body,form
+{
+	height:100%;
+}
+h1
+{
+	font-size:26px;
+}
+h3
+{
+	font-size:16px;
+}
+img
+{
+	border:0px;
+}
+a
+{
+	color:#333333;
+}
+#wrap
+{
+	min-height:100%;
+	margin:0px auto;
+	width:900px;
+}
+#content
+{
+	padding-left:10px;
+	padding-right:10px;
+	white-space:normal;
+	overflow:auto;
+	padding-bottom:55px;
+}
+#header
+{
+	padding-top:10px;
+	height:135px;
+}
+#header #logo
+{
+	background:url(logo.png) no-repeat;
+    padding: 80px 0 0 0;
+    overflow: hidden;
+    height: 0px !important;
+    height /**/:80px;
+}
+#footer
+{
+	display:block;
+	margin-top:-45px;
+	height:45px;
+	background: url(footerbg.png) repeat-x;
+	overflow:hidden;
+	text-align:center;
+}
+#footercontent
+{
+	margin:0px auto;
+	width:900px;
+}
+#footer #footercontent ul 
+{
+	margin:0px;
+	padding-top:12px;
+	list-style-type:none; 
+}
+#footer #footercontent ul li 
+{
+	display:inline; 
+}
+#footer #footercontent ul li a.first
+{
+	border-left:none;
+}
+#footer #footercontent ul li a, #footer #footercontent ul li span
+{
+	text-decoration:none;
+	color:gray;
+	border-left:2px solid gray;
+	padding-left:8px;
+	padding-right:5px;
+}
+#footer #poweredby
+{
+	margin:0px;
+	padding-top:12px;
+	padding-right:10px;
+	text-align:right;
+	color:gray;
+	text-decoration:none;
+	font-size:8pt;
+}
+#footer #poweredby a
+{
+	color:gray;
+	text-decoration:none;
+	font-size:8pt;
+	vertical-align:top;
+}
+
+#loginform
+{
+	position:absolute;
+	background:url(loginform.png) no-repeat;
+	top:45px;
+	padding-top:10px;
+	padding-left:10px;
+	height:125px;
+	width:220px;
+	display:none;
+	overflow:hidden;
+	white-space:nowrap;
+	margin-left:-67px;
+	text-align: center;
+}
+
+#loginform a
+{
+	background:none;
+	float: none;
+	display:inline;
+	color:Black;
+	text-decoration: underline;
+	font-family: sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	padding:0px;
+	height: 15px;
+	line-height: 15px;
+	cursor: pointer;	}
+
+#loginform input, #loginform label
+{
+	display: block;
+    width: 100px;
+    float: left;
+    margin-bottom: 10px;
+}
+#loginform button
+{
+	display:block;
+	float:left;
+}
+#loginform br
+{
+	clear:both;
+}
+#signin
+{	
+	float:right;
+}
+
+
+/*Some font styles*/
+.small
+{
+	font-size:10px;
+}
+
+
+/*Quick links (used on right side bar, e.g. contact us)*/
+.quicklink
+{
+	margin-left:10px;
+}
+.quicklink a
+{
+	text-decoration:none;
+}
+.quicklink a label
+{
+	cursor:pointer;
+}
+
+
+/*Quote box (used on right side bar, e.g. case studies)*/
+.quote
+{
+	width:214px;margin-left:10px;
+}
+.quote .quotehead
+{
+	background-image:url(quotetop.gif);background-repeat:no-repeat;height:3px;
+}
+.quote .quotecontent
+{
+	background-image:url(quotemiddel.gif);padding:5px;
+	font-size:12px;
+}
+.quote .quotebottom
+{
+	background-image:url(quotebottom.gif);background-repeat:no-repeat;height:17px;
+}

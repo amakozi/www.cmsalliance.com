@@ -1,0 +1,212 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="WebsiteMainTemplate.master.cs"
+    Inherits="resources_masterpages_WebsiteMainTemplate" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title runat="server" id="tag_title">CMS Alliance</title>
+    <meta name="description" runat="server" id="tag_description" content="" />
+    <meta name="keywords" runat="server" id="tag_keywords" content="amakozi, technology, consulting, consultant, tridion, sdl tridion, content management" />
+    <meta name="author" runat="server" id="Meta1" content="Amakozi Technologies (http://www.amakozi.com)" />
+    <meta name="robots" content="no-cache" />
+    <link id="Link1" runat="server" href="~/resources/css/style.css" rel="stylesheet"
+        media="screen" type="text/css" />
+    <!--<link runat="server" href="~/resources/css/netmain.css" rel="stylesheet" media="screen"
+        type="text/css" />
+    <link runat="server" href="~/resources/css/home.css" rel="stylesheet" media="screen"
+        type="text/css" />-->
+    <link runat="server" href="~/resources/css/menu.css" rel="stylesheet" media="screen"
+        type="text/css" />
+    <link runat="server" href="~/resources/css/buttons.css" rel="stylesheet" media="screen"
+        type="text/css" />
+    <link runat="server" href="~/resources/css/nivo-slider.css" rel="stylesheet" media="screen"
+        type="text/css" />
+</head>
+<body>
+    <form id="main_form" runat="server">
+    <div id="wrap">
+        <div id="header">
+            <a runat="server" href="~/default.aspx">
+                <div id="logo" class="unitPng">
+                    CMS Alliance</div>
+            </a>
+            <div id="menu">
+                <ul class="glossymenu">
+                    <li><a runat="server" href="~/default.aspx">Home</a></li><!--
+                End Home Item -->
+                    <li><a href="~/members" runat="server" class="drop">Members</a><!-- Begin 5 columns Item
+                -->
+                        <div class="dropdown_3columns">
+                            <!-- Begin 5 columns container -->
+                            <div class="col_3">
+                                <h2>
+                                    Newest Members</h2>
+                            </div>
+                            <asp:Repeater ID="repeat_list_newest_members" runat="server">
+                                <ItemTemplate>
+                                    <div class="col_3">
+                                        <img runat="server" src='<%# "" + ( (Eval("image") == null) ? "~/resources/img/logo.png" : "~/resources/uploads/" + Eval("image") ) %>' style="width: 70px; margin-left: 0px;" class="img_left imgshadow" alt="" />
+                                        <p>
+                                            <%# (Eval("company_name") == null) ? Eval("firstname") + " " + Eval("lastname") : Eval("company_name") %>
+                                            <a runat="server" href='<%# "~/member/" + Eval("id")  %>'>View Profile</a></p>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <div class="col_1">
+                                <a runat="server" style="color:Black;" href="~/members.aspx" class="button medium white">View all our Members</a>
+                            </div>
+                            <div class="col_1">
+                                <a id="A3" style="color:White;" runat="server" href="~/members.aspx" class="button medium gray">View all our Members</a>
+                            </div>
+                            <div class="col_1">
+                                <a id="A4" style="color:White;" runat="server" href="~/members.aspx" class="button medium red">View all our Members</a>
+                            </div>
+                    </li>
+                    <!-- End 5 columns Item -->
+                    <li><a href="#" class="drop">Projects</a><!--
+                Begin 5 columns Item -->
+                        <div class="dropdown_5columns">
+                            <!-- Begin 5 columns container
+                -->
+                            <div class="col_5">
+                                <h2>
+                                    Newest Projects for you
+                                </h2>
+                            </div>
+                            <div class="col_3">
+                                <img src="img/01.jpg" width="70" height="70" class="img_left imgshadow" alt="" />
+                                <p>
+                                    Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet
+                                    tristique eu, tristique sed odio. Praesent ut interdum elit. Sed in sem mauris.
+                                    Aenean a commodo mi. Praesent augue lacus.<a href="#">Read more...</a></p>
+                                <img src="img/02.jpg" width="70" height="70" class="img_left imgshadow" alt="" />
+                                <p>
+                                    Aliquam elementum felis quis felis consequat scelerisque. Fusce sed lectus at arcu
+                                    mollis accumsan at nec nisi. Aliquam pretium mollis fringilla. Nunc in leo urna,
+                                    eget varius metus. Aliquam sodales nisi.<a href="#">Read more...</a></p>
+                            </div>
+                            <div class="col_2">
+                                <a href="#" class="button white medium">View all Members</a>
+                                <p class="black_box">
+                                    Only Members that gave us their consent have their profiles shown to the public!</p>
+                            </div>
+                        </div>
+                        <!-- End 5 columns container -->
+                    </li>
+                    <!-- End 5 columns Item -->
+                    <li><a href="#" class="drop">Company</a><!-- Begin 4 columns Item -->
+                        <div class="dropdown_2columns">
+                            <!--
+                Begin 4 columns container -->
+                            <div class="col_1">
+                                <h3>
+                                    Us</h3>
+                                <ul>
+                                    <li><a runat="server" href="~/about.aspx">About</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Privacy Statement</a></li>
+                                </ul>
+                            </div>
+                            <div class="col_1">
+                                <h3>
+                                    Legal</h3>
+                                <ul>
+                                    <li><a runat="server" href="~/about.aspx">About</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Privacy Statement</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End 4 columns container -->
+                    </li>
+                    <!-- End 4 columns Item
+
+                -->
+                    <% if (Session[Constants.user_session] != null)
+                       { %>
+                    <li id="Li4" class="menu_right"><a runat="server" id="link_logout" href="#">Logout</a></li>
+                    <li class="menu_right"><a id="A2" href="~/account/changepassword.aspx" runat="server">
+                        Change Password</a></li>
+                    <li class="menu_right"><a id="A1" href="~/default.aspx" runat="server">My Account</a></li>
+                    <% }
+                       else
+                       { %>
+                    <li class="menu_right"><a id="link_login" runat="server" href="~/account/login.aspx"
+                        class="drop">Login</a><!-- Begin 3 columns Item -->
+                        <div class="dropdown_3columns
+                align_right">
+                            <!-- Begin 3 columns container -->
+                            <div class="col_3">
+                                <h2>
+                                    Login with your account</h2>
+                            </div>
+                            <div class="col_3">
+                                <fieldset>
+                                    <div runat="server" id="msg_block" class="msg msg-error">
+                                        <p>
+                                            No Such Code Registered?!?!</p>
+                                    </div>
+                                    <legend>Login with your Details</legend>
+                                    <br />
+                                    <label for="txt_email">
+                                        E-Mail: <span class="small">
+                                            <asp:Label ID="lbl_error_email" runat="server" Text="Label">Required</asp:Label></span>
+                                    </label>
+                                    <asp:TextBox ValidationGroup="master_login_form" runat="server" ID="txt_email" />
+                                    <br />
+                                    <label for="txt_password">
+                                        Password: <span class="small">
+                                            <asp:Label ID="lbl_error_password" runat="server" Text="Label">Required</asp:Label></span>
+                                    </label>
+                                    <asp:TextBox ValidationGroup="master_login_form" TextMode="Password" runat="server"
+                                        ID="txt_password" />
+                                    <br />
+                                    <label>
+                                    </label>
+                                    <span style="margin-left: 60px;">
+                                        <asp:Button ID="Button1" ValidationGroup="master_login_form" OnClick="login_button_Click"
+                                            runat="server" CssClass="button
+                medium white" Width="100" Text="Login Now" />
+                                        <asp:Button ID="Button2" runat="server" CssClass="button medium gray" ValidationGroup="master_login_form"
+                                            Width="130" Text="Forgot Password" OnClick="forgot_password_button_Click" />
+                                    </span>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <!-- End 3 columns container -->
+                    </li>
+                    <!-- End 3 columns Item -->
+                    <%
+                       } %>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder ID="place_holder_content" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footercontent">
+            <div id="poweredby">
+                <a href="http://www.amakozi.com" title="Amakozi Technologies">This is a proud initiative
+                    by
+                    <img runat="server" src="~/resources/img/amakozi_logo _117x26_grayscale_transparent.png"
+                        border="0" alt="Amakozi Technologies" /></a>
+            </div>
+        </div>
+    </div>
+    <asp:ScriptManager runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="~/resources/js/jquery-1.4.3.min.js" />
+            <asp:ScriptReference Path="~/resources/js/alliance.js" />
+            <asp:ScriptReference Path="~/resources/js/jquery.nivo.slider.pack.js" />
+            <asp:ScriptReference Path="~/resources/js/unitpngfix.js" />
+        </Scripts>
+    </asp:ScriptManager>
+    </form>
+</body>
+</html>

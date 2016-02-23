@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CmsAllianceModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CmsAllianceModelStoreContainer">
+          <EntitySet Name="users" EntityType="CmsAllianceModel.Store.users" store:Type="Tables" Schema="cmsalliance" />
+          <EntitySet Name="votes" EntityType="CmsAllianceModel.Store.votes" store:Type="Tables" Schema="cmsalliance" />
+        </EntityContainer>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="approved" Type="datetime" />
+          <Property Name="company_name" Type="varchar" MaxLength="255" />
+          <Property Name="company_size" Type="int" />
+          <Property Name="company_website" Type="varchar" MaxLength="255" />
+          <Property Name="created" Type="datetime" Nullable="false" />
+          <Property Name="email" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="email_confirmation_code" Type="text" />
+          <Property Name="email_confirmed" Type="datetime" />
+          <Property Name="firstname" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="image" Type="text" />
+          <Property Name="lastlogin" Type="datetime" />
+          <Property Name="lastname" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="lastupdated" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="password" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="public_viewable" Type="bool" Nullable="false" />
+        </EntityType>
+        <EntityType Name="votes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="answer" Type="bool" Nullable="false" />
+          <Property Name="created" Type="datetime" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="lastupdated" Type="timestamp" Nullable="false" Precision="0" />
+          <Property Name="votee" Type="int" Nullable="false" />
+          <Property Name="voter" Type="int" Nullable="false" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CmsAllianceModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="users" EntityType="CmsAllianceModel.user" />
+          <EntitySet Name="votes" EntityType="CmsAllianceModel.vote" />
+        </EntityContainer>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="DateTime" Name="approved" />
+          <Property Type="String" Name="company_name" />
+          <Property Type="Int32" Name="company_size" />
+          <Property Type="String" Name="company_website" />
+          <Property Type="DateTime" Name="created" Nullable="false" />
+          <Property Type="String" Name="email" Nullable="false" />
+          <Property Type="String" Name="email_confirmation_code" />
+          <Property Type="DateTime" Name="email_confirmed" />
+          <Property Type="String" Name="firstname" Nullable="false" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="image" />
+          <Property Type="DateTime" Name="lastlogin" />
+          <Property Type="String" Name="lastname" Nullable="false" />
+          <Property Type="DateTimeOffset" Name="lastupdated" Nullable="false" />
+          <Property Type="String" Name="password" Nullable="false" />
+          <Property Type="Boolean" Name="public_viewable" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vote">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Boolean" Name="answer" Nullable="false" />
+          <Property Type="DateTime" Name="created" Nullable="false" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTimeOffset" Name="lastupdated" Nullable="false" />
+          <Property Type="Int32" Name="votee" Nullable="false" />
+          <Property Type="Int32" Name="voter" Nullable="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CmsAllianceModelStoreContainer" CdmEntityContainer="CAEntities">
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="CmsAllianceModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="public_viewable" ColumnName="public_viewable" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="lastupdated" ColumnName="lastupdated" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="lastlogin" ColumnName="lastlogin" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="email_confirmed" ColumnName="email_confirmed" />
+                <ScalarProperty Name="email_confirmation_code" ColumnName="email_confirmation_code" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="created" ColumnName="created" />
+                <ScalarProperty Name="company_website" ColumnName="company_website" />
+                <ScalarProperty Name="company_size" ColumnName="company_size" />
+                <ScalarProperty Name="company_name" ColumnName="company_name" />
+                <ScalarProperty Name="approved" ColumnName="approved" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="votes">
+            <EntityTypeMapping TypeName="CmsAllianceModel.vote">
+              <MappingFragment StoreEntitySet="votes">
+                <ScalarProperty Name="voter" ColumnName="voter" />
+                <ScalarProperty Name="votee" ColumnName="votee" />
+                <ScalarProperty Name="lastupdated" ColumnName="lastupdated" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created" ColumnName="created" />
+                <ScalarProperty Name="answer" ColumnName="answer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="DBModel">
+        <EntityTypeShape EntityType="CmsAllianceModel.user" Width="1.5" PointX="0.75" PointY="0.75" Height="3.5644742838541656" />
+        <EntityTypeShape EntityType="CmsAllianceModel.vote" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9210009765624996" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

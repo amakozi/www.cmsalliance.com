@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="CMS Alliance">
+		<meta name="keywords" content="amakozi, technology, consulting, consultant, tridion, sdl tridion, content management">
+		<link href="./design/netmain.css" rel="stylesheet" media="screen" type="text/css">
+		<link href="./design/net2col.css" rel="stylesheet" media="screen" type="text/css">
+		<link href="./design/menu.css" rel="stylesheet" media="screen" type="text/css">
+		<link href="./design/nivo-slider.css" rel="stylesheet" media="screen" type="text/css">
+    	<script type="text/javascript" src="./design/jquery-1.4.3.min.js"></script>
+    	<script type="text/javascript" src="./design/jquery.nivo.slider.pack.js"></script>
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="./design/unitpngfix.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<style>
+				#loginform
+				{
+					margin-left:-203px !important;
+				}
+			</style>
+		<![endif]-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#signin a:first-child").click(function () {
+					var logindiv = $("#loginform");
+					if($(logindiv).is(':visible'))
+					{
+						$(logindiv).hide(500);
+						$("#signin").removeClass("current");
+					}else{
+						$(logindiv).show(500);
+						$("#signin").addClass("current");
+					}
+				});
+			});
+		</script>
+
+		<title>
+			CMS Alliance
+		</title>
+	</head>
+	<body>
+	    <form name="aspnetForm" method="post" action="./voted.htm" id="aspnetForm">
+		<div id="wrap">
+			<div id="header">
+				<a href="./default_loggedin.htm">
+					<div id="logo" class="unitPng">CMS Alliance</div>
+				</a>
+				<div id="menu">
+					<ul class="glossymenu">
+						<li class="current"><a href="default_loggedin.htm"><b>Home</b></a></li>
+						<li class=""><a href="members.htm"><b>Members</b></a></li>
+						<li class=""><a href="projects.htm"><b>Projects</b></a></li>
+						<li class=""><a href="about.htm"><b>About</b></a></li>
+						<li id="signin"><a href="#"><b>My Member Account</b></a>
+							<div id="loginform" style="text-align:left;">
+							<br/>
+							<br/>
+							<a href="./profile.htm">Edit my Profile</a>
+							<br/>
+							<br/>
+							<a href="./default.htm">Logout</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="content">
+					<br/>
+					<div style="width:100%">
+						<img src="./graphics/grisnich.gif" style="width:120px;float:right;"/>
+						<h2>Ron Grisnich has requested membership to the alliance.</h2>
+						<div style="width:400px;float:left;">
+							<table cellpadding="0" cellspacing="0" style="width:100%;">
+								<tr>
+									<td style="text-align:right">Company Name :&nbsp;</td>
+									<td><i>Grisnich.com</i></td>
+								</tr>
+								<tr>
+									<td style="text-align:right">Company Website :&nbsp;</td>
+									<td><a href="http://www.grisnich.com" target="_blank"><i>www.grisnich.com</i></a></td>
+								</tr>
+								<tr>
+									<td style="text-align:right">Email Address :&nbsp;</td>
+									<td><i>ron@grisnich.com</i></td>
+								</tr>
+							</table>
+						</div>
+						<div style="width:400px;float:right;">
+							Doing a automatic search we found the following possible references for you to look at.  Note that these might not be "Ron Grisnich".
+							<br/>
+							<ul>
+
+								<li>Facebook  : http://www.facebook.com/ron.grisnich</li>
+								<li>Linked In : http://www.linkedin.com/ron.grisnich</li>
+							</ul>
+						</div>
+					</div>
+					<div style="width:100%; clear:both; text-align:center">
+						<br/>
+						<input type="submit" value="Yes, my vote is yes" style="width:130px"/> <input type="button" value="No! Never! No!" style="width:130px"/>
+					</div>
+
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footercontent">
+				<div id="poweredby">
+					<a href="http://www.amakozi.com" title="Amakozi Technologies">
+						This is a proud initiative by <img src="./design/Logo 117x26 Grayscale Transparent.png" border="0" alt="Amakozi Technologies"/>
+					</a>
+				</div>
+			</div>
+		</div>
+    	</form>
+	</body>
+</html>

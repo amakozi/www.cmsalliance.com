@@ -1,0 +1,21 @@
+﻿#main
+{
+	float:left;
+	width:500px;
+	border-right:1px solid black;
+	margin-right:-1px;
+}
+#left
+{
+	display:inline;
+	width:150px;
+	border-right:1px solid black;
+	float:left;
+	overflow:auto;
+	margin-right:-1px;
+}
+#right
+{
+	border-left:1px solid black;
+	overflow:auto;
+}

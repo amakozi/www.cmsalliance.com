@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="CMS Alliance">
+		<meta name="keywords" content="amakozi, technology, consulting, consultant, tridion, sdl tridion, content management">
+		<link href="./design/netmain.css" rel="stylesheet" media="screen" type="text/css">
+		<link href="./design/home.css" rel="stylesheet" media="screen" type="text/css">
+		<link href="./design/menu.css" rel="stylesheet" media="screen" type="text/css">
+		<link href="./design/nivo-slider.css" rel="stylesheet" media="screen" type="text/css">
+    	<script type="text/javascript" src="./design/jquery-1.4.3.min.js"></script>
+    	<script type="text/javascript" src="./design/jquery.nivo.slider.pack.js"></script>
+		<!--[if lt IE 7]>
+			<script type="text/javascript" src="./design/unitpngfix.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<style>
+				#loginform
+				{
+					margin-left:-203px !important;
+				}
+			</style>
+		<![endif]-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#signin a:first-child").click(function () {
+					var logindiv = $("#loginform");
+					if($(logindiv).is(':visible'))
+					{
+						$(logindiv).hide(500);
+						$("#signin").removeClass("current");
+					}else{
+						$(logindiv).show(500);
+						$("#signin").addClass("current");
+					}
+				});
+			});
+		</script>
+
+		<title>
+			CMS Alliance
+		</title>
+	</head>
+	<body>
+	    <form name="aspnetForm" method="post" action="./registeremailconfirm.htm" id="aspnetForm">
+		<div id="wrap">
+			<div id="header">
+				<a href="./default.htm">
+					<div id="logo" class="unitPng">CMS Alliance</div>
+				</a>
+				<div id="menu">
+					<ul class="glossymenu">
+						<li class="current"><a href="default.htm"><b>Home</b></a></li>
+						<li class=""><a href="members.htm"><b>Members</b></a></li>
+						<li class=""><a href="about.htm"><b>About</b></a></li>
+						<li id="signin"><a href="#"><b>My Member Account</b></a>
+							<div id="loginform"><label for="username">Username</label><input type="text" id="username"/><label for="password">Password</label><input type="password" /><br /><input type="button" style="width:50px" onclick="location='./default_loggedin.htm'" value="Login"/>&nbsp;&nbsp;<a href="#">Forgot Password</a>&nbsp;&nbsp;<a href="./register.htm">Register</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="content">
+
+				<div id="main">
+					<script type="text/javascript">
+					$(window).load(function() {
+					$('#slider').nivoSlider();
+					});
+					</script>
+
+					<br />
+					<br />
+					<br />
+
+					<div id="slider" class="nivoSlider">
+						<a href="members.htm"><img src="./banners/banner1.png"/></a>
+						<a href="register.htm"><img src="./banners/banner2.png"/></a>
+						<a href="register.htm"><img src="./banners/banner3.png"/></a>
+					</div>
+				</div>
+
+				<div id="right">
+					<br/>
+					<br />
+					<h2>Become a member</h2>
+					<hr/>
+					<style>
+						.registertable
+						{
+							width:95%;
+							table-layout:fixed;
+						}
+						.registertable input
+						{
+							width:100%;
+						}
+						.registertable td
+						{
+							text-align:right;
+						}
+					</style>
+					<table cellpadding="0" cellspacing="0" class="registertable">
+						<tr style="height:1px;"><td style="width:120px;"/><td/></tr>
+						<tr>
+							<td colspan="2">
+								<h3>Company details</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>Company Name:</td>
+							<td><input type="text"/></td>
+						</tr>
+						<tr>
+							<td>Company Website:</td>
+							<td><input type="text" value="http://"/></td>
+						</tr>
+						<tr>
+							<td>Company Size:</td>
+							<td>
+								<select style="width:100%;">
+									<option value="">Me, Myself and I</option>
+									<option value="">Less than 5 of us</option>
+									<option value="">Less than 10 of us</option>
+									<option value="">Lots of employees</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<h3>Your details</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>First Name:</td>
+							<td><input type="text"/></td>
+						</tr>
+						<tr>
+							<td>Last Name:</td>
+							<td><input type="text"/></td>
+						</tr>
+						<tr>
+							<td>Your Email:</td>
+							<td><input type="text"/></td>
+						</tr>
+						<tr>
+							<td>Re-enter Email:</td>
+							<td><input type="text"/></td>
+						</tr>
+						<tr>
+							<td>Password:</td>
+							<td><input type="text"/></td>
+						</tr>
+					</table>
+					<hr/>
+					<table cellpadding="0" cellspacing="0" class="registertable">
+						<tr style="height:1px;"><td style="width:120px;"/><td/></tr>
+						<tr>
+							<td></td>
+							<td style="text-align:left;">
+								<input type="submit" value="Register" style="width:100px;"/>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td style="text-align:left;"><label class="small">Already a member?  Click on the <br/> My Member Account link at the top of this page to login.</label></td>
+						</tr>
+					</table>
+				</div>
+
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footercontent">
+				<div id="poweredby">
+					<a href="http://www.amakozi.com" title="Amakozi Technologies">
+						This is a proud initiative by <img src="./design/Logo 117x26 Grayscale Transparent.png" border="0" alt="Amakozi Technologies"/>
+					</a>
+				</div>
+			</div>
+		</div>
+    	</form>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+#main
+{
+	display:inline;
+	width:650px;
+	border-right:1px solid black;
+	float:left;
+	overflow:auto;
+	margin-right:-1px;
+}
+#right
+{
+	border-left:1px solid black;
+	overflow:auto;
+}
+
+#right p, #right h4, #right h3, #right h2
+{
+	margin-left:10px;
+}
+#right img
+{
+	margin-left:10px;
+}
